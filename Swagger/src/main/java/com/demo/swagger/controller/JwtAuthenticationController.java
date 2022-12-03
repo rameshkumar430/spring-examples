@@ -16,7 +16,6 @@ import lombok.RequiredArgsConstructor;
 
 @Profile(Profiles.JWT_AUTH)
 @RestController
-@RequestMapping("app/auth")
 @CrossOrigin
 @RequiredArgsConstructor
 public class JwtAuthenticationController {

@@ -59,7 +59,7 @@ public class JwtAuthSecurityConfig extends WebSecurityConfigurerAdapter {
         // Disable CSRF
         httpSecurity.csrf().disable()
                 // Only admin can perform HTTP delete operation
-                .authorizeRequests().antMatchers(HttpMethod.DELETE).hasRole(Role.ADMIN)
+                .authorizeRequests().antMatchers().hasRole(Role.ADMIN)
                 // any authenticated user can perform all other operations
                 .antMatchers("/app/**").hasAnyRole(Role.ADMIN, Role.USER)
                 // Permit all other request without authentication
